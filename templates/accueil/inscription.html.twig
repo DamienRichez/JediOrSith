@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+
+<div class="masthead">
+    <div class="container">
+        <div class="jumbotron">    
+            {% if isModification %}
+                Modification de {{ personnage.prenom }} {{ personnage.nom }} 
+            {% else %}
+                Ajout d'un Personnage 
+            {% endif %}
+            {{ form_start(form) }}
+                {{form_widget(form)}}
+                <input type="submit" class="btn btn-success" value="valider">
+            {{ form_end(form) }}
+        </br>
+      </div>
+    </div>
+    </div>
+
+{% endblock %}
